@@ -1,0 +1,9 @@
+<ul class="list-group">
+	<% @communities.each do |community| %>
+		<li class="list-group-item">
+			<%= link_to community.name, community %> - <%= community.description %>
+		</li>
+	<% end %>
+</ul>
+
+<%= link_to "New", new_community_path, class:"btn btn-success mt-3" %>
