@@ -1,9 +1,25 @@
-<ul class="list-group">
+<p id="notice"><%= notice %></p>
+
+<h1>Communities</h1>
+
+<table class="table">
+	<thead>
+	<tr>
+		<th>Community</th>
+		<th>Description</th>
+		<th colspan="2"></th>
+	</tr>
+	</thead>
+	
+	<tbody>
 	<% @communities.each do |community| %>
-		<li class="list-group-item">
-			<%= link_to community.name, community %> - <%= community.description %>
-		</li>
+		<tr>
+			<td><%= link_to community.name, community %></td>
+			<td><%= community.description %></td>
+		</tr>
 	<% end %>
-</ul>
+	</tbody>
+</table>
 
 <%= link_to "New", new_community_path, class:"btn btn-success mt-3" %>
+

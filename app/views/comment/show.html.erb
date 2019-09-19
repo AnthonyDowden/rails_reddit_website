@@ -1,0 +1,6 @@
+<% @post.comment.each do |comment| %>
+	<tr>
+		<td><%= comment.name %></td>
+		<td><%= comment.content %></td>
+	</tr>
+<% end %>
