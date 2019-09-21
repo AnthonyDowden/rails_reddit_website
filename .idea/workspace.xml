@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf94741a-d169-4d4b-b0b5-80384f7bc9fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/comment/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/comment/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/comment/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/railways.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/railways.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reddit_website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reddit_website.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/community.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/community.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/communities/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/communities/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/communities/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/communities/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +212,7 @@
       <workItem from="1568731907521" duration="20000" />
       <workItem from="1568731937943" duration="460000" />
       <workItem from="1568738129532" duration="7867000" />
-      <workItem from="1568912122244" duration="2393000" />
+      <workItem from="1568912122244" duration="7452000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1567459235930</created>
@@ -233,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567459235930</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="comments and posts done">
+      <created>1568914584829</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568914584829</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +249,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="comments and posts done" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments and posts done" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
