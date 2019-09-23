@@ -2,5 +2,5 @@
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Show', community_post_path(@community, @post) %> |
+<%= link_to 'Back', community_posts_path(@community) %>

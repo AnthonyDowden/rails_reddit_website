@@ -1,32 +1,45 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%#= tinymce_assets %>
+<%= form_with(model: [@community, post], local: true) do |form| %>
+	<% if post.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+			
+			<ul>
+				<% post.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 	
-  <div class="form-group">
-    <%= form.label :community_id %>
-    <%= form.text_field :community_id, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :content %>
-    <%= form.text_area :content, class: 'form-control' %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit 'Create', class: 'btn btn-success' %>
-  </div>
+	<div class="form-group">
+		<%= form.label :title %>
+		<%= form.text_field :title, class: 'form-control' %>
+	</div>
+	
+	<div class="form-group">
+		<%= form.label :content %>
+		<%= form.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
+	</div>
+	
+	<div class="actions">
+		<%= form.submit 'Create', class: 'btn btn-success' %>
+	</div>
 <% end %>
+<script type="text/javascript" charset="utf-8">
+	$(document).on('turbolinks:load', function(){
+		tinymce.init({
+			selector: "textarea.tinymce",
+			toolbar: 'styleselect | bold italic | undo redo | alignleft aligncenter alignright alignjustify alignnone | pagebreak code | link quickimage media | insertfile | help',
+			menubar: 'insert',
+			plugins: ['image link quickbars table media help code pagebreak'],
+			relative_urls: false,
+			skin: "oxide",
+			link_list: [
+				<% @posts.each do |post| %>
+				{title: '<%= post.title %>', value: '<%= community_post_path(@community, post) %>'},
+				<% end %>
+			]
+		})
+	});
+</script>

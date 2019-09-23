@@ -2,23 +2,40 @@
 
 <div>
 	<h1><%= @post.title %></h1>
-	<p><%= @post.content %></p>
+	<p><%= raw @post.content %></p>
 </div>
 
+<% if user_signed_in? %>
+	<% if current_user.voted_for? @post %>
+		<%= link_to unlike_community_post_path(@community, @post) do %>
+			<i class="fas fa-thumbs-up"></i>
+		<% end %>
+	<% else %>
+		<%= link_to like_community_post_path(@community, @post) do %>
+			<i class="far fa-thumbs-up"></i>
+		<% end %>
+	<% end %>
+<% else %>
+	<div class="alert alert-danger" role="alert">
+		You must be logged in to vote!
+	</div>
+<% end %>
+
+<%= @post.votes_for.size %>
 <% @post.comments.each do |comment| %>
 	<br>
 	<%= comment.content %>
 	<br>
 <% end %>
 
-<p id="notice"><%= notice %></p>
 
-<%= form_for [@post, @post.comments.new] do |comment| %>
+
+<%= form_with model: [@community, @post, @post.comments.build], local: true do |comment| %>
 	<div class="input-group">
 		<div class="input-group-prepend">
-		<%= comment.label :comment, class: "input-group-text" %>
+			<%= comment.label :comment, class: "input-group-text" %>
 		</div>
-		<%= comment.text_area :content, class: "form-control"%>
+		<%= comment.text_area :content, class: "form-control" %>
 	</div>
 	<p id="notice"><%= notice %></p>
 	<div class="actions">
@@ -26,6 +43,10 @@
 	</div>
 <% end %>
 
-<p id="notice"><%= notice %></p>
-<%= link_to 'Edit', edit_post_path(@post), class: "btn btn-primary" %>
-<%= link_to 'Back', posts_path, class: "btn btn-primary" %>
+<% if @post.user === current_user %>
+	<%= link_to 'Edit', edit_community_post_path(@community, @post), class: "btn btn-primary" %>
+	<%= link_to "Delete", community_post_path(@post.community, @post), class: "btn btn-primary",
+	            method: :delete,
+	            data: {confirm: "You sure?"}%>
+<% end %>
+<%= link_to 'Back', community_posts_path(@community), class: "btn btn-primary" %>
