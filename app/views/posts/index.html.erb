@@ -24,7 +24,7 @@
 			<td><%= link_to post.title, community_post_path(@community, post) %></td>
 			<td><%= post.comments.count %></td>
 			<td><%= post.user_id %></td>
-			<td><%= post.created_at %></td>
+			<td><%= time_ago_in_words(post.created_at) %></td>
 		</tr>
 	<% end %>
 	</tbody>

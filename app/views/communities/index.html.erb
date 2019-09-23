@@ -1,9 +1,7 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Communities</h1>
 <%= link_to "New", new_community_path, class:"btn btn-success mt-3" %>
 
-<p id="notice"><%= notice %></p>
 <div class="text-center">
 	<div class="row">
 		<% @communities.each do |community| %>
@@ -13,7 +11,7 @@
 					<div class="card-body">
 						<h5 class="card-title"><%= community.name %></h5>
 						<p class="card-text"><%= community.description %></p>
-						<%= link_to "Join", community_posts_path(community), class: "btn btn-success mt-3" %>
+						<%= link_to "Enter", community_posts_path(community), class: "btn btn-success mt-3" %>
 					</div>
 				</div>
 			</div>

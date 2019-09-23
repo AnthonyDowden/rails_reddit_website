@@ -1,48 +1,54 @@
-                     Prefix Verb   URI Pattern                                                                              Controller#Action
-                       root GET    /                                                                                        home#index
-           new_user_session GET    /users/sign_in(.:format)                                                                 devise/sessions#new
-               user_session POST   /users/sign_in(.:format)                                                                 devise/sessions#create
-       destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
-          new_user_password GET    /users/password/new(.:format)                                                            devise/passwords#new
-         edit_user_password GET    /users/password/edit(.:format)                                                           devise/passwords#edit
-              user_password PATCH  /users/password(.:format)                                                                devise/passwords#update
-                            PUT    /users/password(.:format)                                                                devise/passwords#update
-                            POST   /users/password(.:format)                                                                devise/passwords#create
-   cancel_user_registration GET    /users/cancel(.:format)                                                                  devise/registrations#cancel
-      new_user_registration GET    /users/sign_up(.:format)                                                                 devise/registrations#new
-     edit_user_registration GET    /users/edit(.:format)                                                                    devise/registrations#edit
-          user_registration PATCH  /users(.:format)                                                                         devise/registrations#update
-                            PUT    /users(.:format)                                                                         devise/registrations#update
-                            DELETE /users(.:format)                                                                         devise/registrations#destroy
-                            POST   /users(.:format)                                                                         devise/registrations#create
-        like_community_post GET    /communities/:community_id/posts/:id/like(.:format)                                      posts#like
-      unlike_community_post GET    /communities/:community_id/posts/:id/unlike(.:format)                                    posts#unlike
-    community_post_comments GET    /communities/:community_id/posts/:post_id/comments(.:format)                             comments#index
-                            POST   /communities/:community_id/posts/:post_id/comments(.:format)                             comments#create
- new_community_post_comment GET    /communities/:community_id/posts/:post_id/comments/new(.:format)                         comments#new
-edit_community_post_comment GET    /communities/:community_id/posts/:post_id/comments/:id/edit(.:format)                    comments#edit
-     community_post_comment GET    /communities/:community_id/posts/:post_id/comments/:id(.:format)                         comments#show
-                            PATCH  /communities/:community_id/posts/:post_id/comments/:id(.:format)                         comments#update
-                            PUT    /communities/:community_id/posts/:post_id/comments/:id(.:format)                         comments#update
-                            DELETE /communities/:community_id/posts/:post_id/comments/:id(.:format)                         comments#destroy
-            community_posts GET    /communities/:community_id/posts(.:format)                                               posts#index
-                            POST   /communities/:community_id/posts(.:format)                                               posts#create
-         new_community_post GET    /communities/:community_id/posts/new(.:format)                                           posts#new
-        edit_community_post GET    /communities/:community_id/posts/:id/edit(.:format)                                      posts#edit
-             community_post GET    /communities/:community_id/posts/:id(.:format)                                           posts#show
-                            PATCH  /communities/:community_id/posts/:id(.:format)                                           posts#update
-                            PUT    /communities/:community_id/posts/:id(.:format)                                           posts#update
-                            DELETE /communities/:community_id/posts/:id(.:format)                                           posts#destroy
-                communities GET    /communities(.:format)                                                                   communities#index
-                            POST   /communities(.:format)                                                                   communities#create
-              new_community GET    /communities/new(.:format)                                                               communities#new
-             edit_community GET    /communities/:id/edit(.:format)                                                          communities#edit
-                  community GET    /communities/:id(.:format)                                                               communities#show
-                            PATCH  /communities/:id(.:format)                                                               communities#update
-                            PUT    /communities/:id(.:format)                                                               communities#update
-                            DELETE /communities/:id(.:format)                                                               communities#destroy
-         rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
-  rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
-         rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
-  update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
-       rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+                    Prefix Verb   URI Pattern                                                                              Controller#Action
+                      root GET    /                                                                                        home#index
+          new_user_session GET    /users/sign_in(.:format)                                                                 devise/sessions#new
+              user_session POST   /users/sign_in(.:format)                                                                 devise/sessions#create
+      destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
+         new_user_password GET    /users/password/new(.:format)                                                            devise/passwords#new
+        edit_user_password GET    /users/password/edit(.:format)                                                           devise/passwords#edit
+             user_password PATCH  /users/password(.:format)                                                                devise/passwords#update
+                           PUT    /users/password(.:format)                                                                devise/passwords#update
+                           POST   /users/password(.:format)                                                                devise/passwords#create
+  cancel_user_registration GET    /users/cancel(.:format)                                                                  devise/registrations#cancel
+     new_user_registration GET    /users/sign_up(.:format)                                                                 devise/registrations#new
+    edit_user_registration GET    /users/edit(.:format)                                                                    devise/registrations#edit
+         user_registration PATCH  /users(.:format)                                                                         devise/registrations#update
+                           PUT    /users(.:format)                                                                         devise/registrations#update
+                           DELETE /users(.:format)                                                                         devise/registrations#destroy
+                           POST   /users(.:format)                                                                         devise/registrations#create
+                  profiles POST   /profiles(.:format)                                                                      profiles#create
+               new_profile GET    /profiles/new(.:format)                                                                  profiles#new
+              edit_profile GET    /profiles/:id/edit(.:format)                                                             profiles#edit
+                   profile GET    /profiles/:id(.:format)                                                                  profiles#show
+                           PATCH  /profiles/:id(.:format)                                                                  profiles#update
+                           PUT    /profiles/:id(.:format)                                                                  profiles#update
+                           DELETE /profiles/:id(.:format)                                                                  profiles#destroy
+       like_community_post GET    /communities/:community_id/posts/:id/like(.:format)                                      posts#like
+     unlike_community_post GET    /communities/:community_id/posts/:id/unlike(.:format)                                    posts#unlike
+   community_post_comments GET    /communities/:community_id/posts/:post_id/comments(.:format)                             comments#index
+                           POST   /communities/:community_id/posts/:post_id/comments(.:format)                             comments#create
+new_community_post_comment GET    /communities/:community_id/posts/:post_id/comments/new(.:format)                         comments#new
+    community_post_comment GET    /communities/:community_id/posts/:post_id/comments/:id(.:format)                         comments#show
+                           PATCH  /communities/:community_id/posts/:post_id/comments/:id(.:format)                         comments#update
+                           PUT    /communities/:community_id/posts/:post_id/comments/:id(.:format)                         comments#update
+                           DELETE /communities/:community_id/posts/:post_id/comments/:id(.:format)                         comments#destroy
+           community_posts GET    /communities/:community_id/posts(.:format)                                               posts#index
+                           POST   /communities/:community_id/posts(.:format)                                               posts#create
+        new_community_post GET    /communities/:community_id/posts/new(.:format)                                           posts#new
+       edit_community_post GET    /communities/:community_id/posts/:id/edit(.:format)                                      posts#edit
+            community_post GET    /communities/:community_id/posts/:id(.:format)                                           posts#show
+                           PATCH  /communities/:community_id/posts/:id(.:format)                                           posts#update
+                           PUT    /communities/:community_id/posts/:id(.:format)                                           posts#update
+                           DELETE /communities/:community_id/posts/:id(.:format)                                           posts#destroy
+               communities GET    /communities(.:format)                                                                   communities#index
+                           POST   /communities(.:format)                                                                   communities#create
+             new_community GET    /communities/new(.:format)                                                               communities#new
+            edit_community GET    /communities/:id/edit(.:format)                                                          communities#edit
+                 community GET    /communities/:id(.:format)                                                               communities#show
+                           PATCH  /communities/:id(.:format)                                                               communities#update
+                           PUT    /communities/:id(.:format)                                                               communities#update
+                           DELETE /communities/:id(.:format)                                                               communities#destroy
+        rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+ rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+        rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+ update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+      rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create

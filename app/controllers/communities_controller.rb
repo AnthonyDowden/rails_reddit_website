@@ -1,5 +1,6 @@
 class CommunitiesController < ApplicationController
 	before_action :set_community, only: [:show, :edit, :destroy]
+
 	def index
 		@communities = Community.all
 	end
@@ -13,9 +14,10 @@ class CommunitiesController < ApplicationController
 	end
 
 	def create
-		@community = Community.new(community_params)
+		@community = Community.create(community_params)
+		@community.user = current_user
 		if @community.save
-			redirect_to communities_path, notice:"#{@community.name} was successfully created."
+			redirect_to communities_path, notice: "#{@community.name} was successfully created."
 		else
 			render :new
 		end
@@ -33,6 +35,12 @@ class CommunitiesController < ApplicationController
 		end
 	end
 
+	def destroy
+		@community.destroy
+		respond_to do |format|
+			format.html { redirect_to communities_path(@community), notice: 'Community was successfully destroyed.' }
+		end
+	end
 
 
 	private
