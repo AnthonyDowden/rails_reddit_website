@@ -17,7 +17,9 @@ else
 	@user = User.find(1)
 end
 
-if Community.all.count < 1
+if Community.all.count < 1 || true
+	Community.destroy_all
+
 	community_data = [
 		{
 			name: 'World of Warcraft',
@@ -64,10 +66,11 @@ if Community.all.count < 1
 
 	community_data.each do |cd|
 		community = Community.create(cd)
-		if posts_data.key?(community.slug)
-			posts_data[community.slug].each do |post|
-				post = community.posts.build(post)
-			end
+		next unless posts_data[community.slug]
+
+		posts_data[community.slug].each do |post|
+			post = community.posts.build(post)
+			post.save!
 		end
 
 	end

@@ -17,13 +17,18 @@ class CommentsController < ApplicationController
 
 
 	def create
-		@comment = @post.comments.build(comment_params)
-		@comment.user = current_user
-		if @comment.save
-			redirect_to community_post_path(@community, @post), notice: 'Comment was successfully created.'
+		if current_user.present?
+			@comment = @post.comments.build(comment_params)
+			@comment.user = current_user
+			if @comment.save
+				redirect_to community_post_path(@community, @post), notice: 'Comment was successfully created.'
+			else
+				render community_post_path(@community, @post), notice: 'Comment was not created.'
+			end
 		else
-			render community_post_path(@community, @post), notice: 'Comment was not created.'
+			redirect_to new_user_session_path
 		end
+
 	end
 
 	private

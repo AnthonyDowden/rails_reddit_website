@@ -1,5 +1,5 @@
 class CommunitiesController < ApplicationController
-	before_action :set_community, only: [:show, :edit, :destroy]
+	before_action :set_community, only: [:show, :edit, :destroy, :update]
 
 	def index
 		@communities = Community.all
@@ -24,12 +24,12 @@ class CommunitiesController < ApplicationController
 	end
 
 	def edit
-
+		@communities = Community.all
 	end
 
 	def update
 		if @community.update(community_params)
-			redirect_to community_path(@community), notice: "#{@community.name} was successfully updated."
+			redirect_to communities_path(@community), notice: "#{@community.name} was successfully updated."
 		else
 			render :edit
 		end

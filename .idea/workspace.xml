@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf94741a-d169-4d4b-b0b5-80384f7bc9fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/policies/application_policy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/policies/post_policy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20191001184504_add_admin_to_users.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/railways.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/railways.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/reddit_website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reddit_website.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/comments_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/communities_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/communities_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/communities/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/communities/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,29 +42,29 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="reddit_dev@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="reddit_dev@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="reddit_dev@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="reddit_dev: database" type="162271b6:PgImplModel$Database" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="reddit_dev@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="reddit_dev: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="reddit_dev@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="reddit_dev: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
@@ -54,7 +72,7 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="reddit_dev@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="reddit_dev: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
@@ -68,8 +86,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Ruby Class" />
-        <option value="Ruby File" />
         <option value="Erb File" />
+        <option value="Ruby File" />
       </list>
     </option>
   </component>
@@ -93,7 +111,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Ruby26/bin/ruby.exe" />
+    <property name="last_opened_file_path" value="D:/My CV" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
@@ -253,6 +271,10 @@
       <workItem from="1569172836416" duration="2861000" />
       <workItem from="1569188881537" duration="6820000" />
       <workItem from="1569234681335" duration="34293000" />
+      <workItem from="1569336622143" duration="2552000" />
+      <workItem from="1569340656360" duration="8519000" />
+      <workItem from="1569350564653" duration="853000" />
+      <workItem from="1569951957870" duration="4040000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1567459235930</created>
@@ -309,8 +331,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="number of items" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/rails_reddit_website@Development__reddit_website.rcov" NAME="Development: reddit_website Coverage Results" MODIFIED="1568139349090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="reddit_website" />
     <SUITE FILE_PATH="coverage/reddit_website@Development__reddit_website.rcov" NAME="Development: reddit_website Coverage Results" MODIFIED="1569263352669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="reddit_website" />
+    <SUITE FILE_PATH="coverage/rails_reddit_website@Development__reddit_website.rcov" NAME="Development: reddit_website Coverage Results" MODIFIED="1569952270819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="reddit_website" />
     <SUITE FILE_PATH="coverage/rails_reddit_website@Rails_console__reddit_website.rcov" NAME="Rails console: reddit_website Coverage Results" MODIFIED="1568738724262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="reddit_website" />
   </component>
 </project>
