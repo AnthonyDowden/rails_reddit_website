@@ -1,6 +1,8 @@
-
 <h1>Communities</h1>
-<%= link_to "New", new_community_path, class:"btn btn-success mt-3" %>
+
+<% if user_signed_in? %>
+	<%= link_to "New", new_community_path, class: "btn btn-success mt-3" %>
+<% end %>
 
 <div class="text-center">
 	<div class="row">

@@ -29,6 +29,6 @@
 	<% end %>
 	</tbody>
 </table>
-
+<% if user_signed_in? %>
 <%= link_to "New", new_community_post_path, class:"btn btn-success mt-3" %>
-
+<% end %>

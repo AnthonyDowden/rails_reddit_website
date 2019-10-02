@@ -11,7 +11,7 @@ class PostPolicy < ApplicationPolicy
 	end
 
 	def admin?
-
+		false
 	end
 
 	def create?
